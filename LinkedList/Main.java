@@ -21,10 +21,16 @@ public class Main {
 
         CSLL csll = new CSLL();
         csll.createCSLL(5);
-        System.out.println(csll.head.value);
-        System.out.println(csll.head.next.value);
-        csll.insertCSLL(4, 1);
-        System.out.println(csll.head.value);
+        csll.insertCSLL(4, 0);
+        csll.insertCSLL(6,2);
+        csll.insertCSLL(10, 7);
+        csll.insertCSLL(7, 5);
+        csll.traverseCSLL();
+        csll.searchNode(10);
+        csll.deleteNode(1);
+        csll.traverseCSLL();
+        csll.deleteCSLL();
+        csll.traverseCSLL();
 
 
 
