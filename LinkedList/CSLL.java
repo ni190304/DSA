@@ -45,10 +45,15 @@ public class CSLL {
     }
 
     public void traverseCSLL() {
+        int num = 0;
+        int mult = 1;
         if (head != null) {
             Node tempNode = head;
             for (int i = 0; i < size; i++) {
+                // System.out.println(size);
                 System.out.print(tempNode.value);
+                num = num + tempNode.value * mult;
+                mult = mult * 10;
                 if (i != size - 1) {
                     System.out.print(" => ");
                 }
@@ -57,6 +62,10 @@ public class CSLL {
         } else {
             System.out.println("\nCSLL doesn not exist!");
         }
+
+        System.out.println('\n');
+
+        System.out.println(num);
     }
 
     public boolean searchNode(int nodeValue) {
@@ -111,11 +120,11 @@ public class CSLL {
         }
     }
 
-    public void deleteCSLL(){
+    public void deleteCSLL() {
         if (head == null) {
             System.out.println("\nThe CSLL doesnt exist");
-            
-        }else{
+
+        } else {
             head = null;
             tail.next = null;
             tail = null;

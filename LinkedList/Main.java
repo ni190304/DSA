@@ -19,18 +19,26 @@ public class Main {
 
         // CSLL
 
-        CSLL csll = new CSLL();
-        csll.createCSLL(5);
-        csll.insertCSLL(4, 0);
-        csll.insertCSLL(6,2);
-        csll.insertCSLL(10, 7);
-        csll.insertCSLL(7, 5);
-        csll.traverseCSLL();
-        csll.searchNode(10);
-        csll.deleteNode(1);
-        csll.traverseCSLL();
-        csll.deleteCSLL();
-        csll.traverseCSLL();
+        // CSLL csll = new CSLL();
+        // csll.createCSLL(5);
+        // csll.insertCSLL(4, 0);
+        // csll.insertCSLL(6,2);
+        // csll.insertCSLL(10, 7);
+        // csll.insertCSLL(7, 5);
+        // csll.traverseCSLL();
+        // csll.searchNode(10);
+        // csll.deleteNode(1);
+        // csll.traverseCSLL();
+        // csll.deleteCSLL();
+        // csll.traverseCSLL();
+
+        // DLL
+
+        DLL dll = new DLL();
+        dll.createDLL(1);
+        dll.insertInLL(2, 0);
+        dll.insertInLL(3, 1);
+        System.out.println(dll.head.next.prev.value);
 
 
 
