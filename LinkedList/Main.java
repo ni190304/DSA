@@ -38,7 +38,17 @@ public class Main {
         dll.createDLL(1);
         dll.insertInLL(2, 0);
         dll.insertInLL(3, 1);
-        System.out.println(dll.head.next.prev.value);
+        dll.insertInLL(5, 1);
+        dll.insertInLL(7, 2);
+        // System.out.println(dll.head.next.prev.value);
+        dll.traverseLL();
+        // dll.revtraverseLL();
+        dll.searchNode(1);
+        System.out.println(dll.size);
+        dll.deletionOfNode(2);
+        dll.traverseLL();
+        dll.deleteSLL();
+        dll.traverseLL();
 
 
 
