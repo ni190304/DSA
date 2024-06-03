@@ -54,7 +54,13 @@ public class Main {
 
         CDLL cdll = new CDLL();
         cdll.createCDLL(12);
-        System.out.println(cdll.head.value);
+        cdll.insertNode(3, 0);
+        cdll.insertNode(6, 1);
+        cdll.insertNode(7, 3);
+        // System.out.println(cdll.head.next.value); 
+        cdll.traverseCDLL();
+        System.out.println();
+        cdll.revtraverseCDLL();
 
 
 
