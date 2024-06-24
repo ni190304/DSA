@@ -49,7 +49,7 @@ public class CDLL {
 
     }
 
-    void traverseCDLL(){
+    void traverseCDLL() {
         if (head != null) {
             DNode tempNode = head;
             for (int i = 0; i < size; i++) {
@@ -59,14 +59,14 @@ public class CDLL {
                 }
                 tempNode = tempNode.next;
             }
-        }else{
+        } else {
             System.out.println("CDLL does not exist.");
         }
 
         // System.out.println();
     }
 
-    void revtraverseCDLL(){
+    void revtraverseCDLL() {
         if (head != null) {
             DNode tempNode = tail;
             for (int i = size; i > 0; i--) {
@@ -76,11 +76,78 @@ public class CDLL {
                 }
                 tempNode = tempNode.prev;
             }
-        }else{
+        } else {
             System.out.println("CDLL does not exist.");
         }
 
         // System.out.println();
+    }
+
+    boolean searchNode(int nodeValue) {
+        if (head != null) {
+            DNode tempNode = head;
+            for (int i = 0; i < size; i++) {
+                if (tempNode.value == nodeValue) {
+                    System.out.println("\nThe node found at location: " + i);
+                    return true;
+                }
+                tempNode = tempNode.next;
+            }
+        }
+        System.out.println("\nNode not found!!");
+        return false;
+    }
+
+    public void deleteNode(int location) {
+        if (head == null) {
+            System.out.println("The CDLL does not exist");
+            return;
+        } else if (location == 0) {
+            if (size == 1) {
+                head.prev = null;
+                head.next = null;
+                head = tail = null;
+                size--;
+                return;
+            } else {
+                head = head.next;
+                head.prev = tail;
+                tail.next = head;
+                size--;
+            }
+        } else if (location >= size) {
+            if (size == 1) {
+                head.prev = null;
+                head.next = null;
+                head = tail = null;
+                size--;
+                return;
+            } else{
+                tail = tail.prev;
+                tail.next = head;
+                head.prev = tail;
+                size--;
+            }
+        } else{
+            DNode tempNode = head;
+            for (int i = 0; i < location - 1; i++) {
+                tempNode = tempNode.next;
+            }
+            tempNode.next = tempNode.next.next;
+            tempNode.next.prev = tempNode;
+            size--;
+        }
+    }
+
+    public void deleteCDLL(){
+        DNode  tempNode = head;
+        for (int i = 0; i < size; i++) {
+            tempNode.prev = null;
+            tempNode = tempNode.next;
+        }
+        head = null;
+        tail = null;
+        System.out.println("The CDLL has been del");
     }
 
 }

@@ -61,6 +61,14 @@ public class Main {
         cdll.traverseCDLL();
         System.out.println();
         cdll.revtraverseCDLL();
+        cdll.searchNode(5);
+        System.out.println();
+        cdll.deleteNode(2);
+        cdll.traverseCDLL();
+        System.out.println();
+        cdll.deleteCDLL();
+        System.out.println();
+        cdll.traverseCDLL();
 
 
 
